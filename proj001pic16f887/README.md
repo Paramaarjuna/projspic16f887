@@ -1,10 +1,29 @@
-#### PROJECT: proj001pic16f887
+<!-- README.md file for proj001pic16f887 -->
 
-**Aim**: Interface an LED with PIC16f887
+## PROJECT: proj001pic16f887
+---
 
-**Description**: To make an LED blink for every 100 milliseconds.
 
-  * `__delay_ms(x)` is a macro to produce time delay in terms of milli-seconds.And it's definition is as follows:  
+### Aim:
+---
+To make an LED blink at regular interval.
+
+
+### Apparatus/Software applications: 
+---
+- MPLAB X IDE v5.35
+- SimulIDE_0.4.13-SR5
+
+**Main Pogram**: [ledblink.c](./proj001pic16f887.x/ledblink.c)
+
+### Circuit Diagram: 
+---
+![proj001pic16f887.png](./proj001pic16f887.png)
+
+
+### Description: 
+---
+* `__delay_ms(x)` is a macro to produce time delay in terms of milli-seconds.And it's definition is as follows:  
 `#define __delay_ms(x) _delay((unsigned long)((x)*(_XTAL_FREQ/4000.0)))`  
 where `_delay((unsigned long)((x)*(_XTAL_FREQ/4000.0)))` is `_delay(x)`.  
 x in `_delay(x)` is the count of instruction cycles.  

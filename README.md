@@ -1,5 +1,5 @@
 
-<!-- README.md file to the head repository. -->
+<!-- README.md file to the head repository projspic16f887. -->
 
 # projspic16f887
 Simple projects on PIC16F887 microcontroller.

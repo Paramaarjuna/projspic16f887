@@ -14,7 +14,7 @@ To make an LED blink at regular interval.
 - MPLAB X IDE v5.35
 - SimulIDE_0.4.13-SR5
 
-**Main Pogram**: [ledblink.c](proj001pic16f887.X/ledblink.c)
+**Main Program**: [ledblink.c](proj001pic16f887.X/ledblink.c)
 
 ### Circuit Diagram: 
 ---

@@ -14,7 +14,7 @@
 - MPLAB X IDE v5.35
 - SimulIDE_0.4.13-SR5
 
-**Main Pogram**: [ledblinkswitch.c](proj002pic16f887.X/ledblinkswitch.c)
+**Main Program**: [ledblinkswitch.c](proj002pic16f887.X/ledblinkswitch.c)
 
 <object data="proj002pic16f887.X/ledblinkswitch.c" type="text/c" width="600"></object>
 
@@ -30,6 +30,7 @@
 ### Circuit Diagram: 
 ---
 **Note:** Unlit LED is blue in color and lit LED is reddish/pinkish in color.  
+
 ![proj002pic16f887.png](proj002pic16f887a.png "proj002pic16f887a.png")  
 <i>**Figure:** proj002pic16f887a.png: Switch is opened and LED not glowing.</i>
 

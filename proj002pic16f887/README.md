@@ -37,6 +37,11 @@
 ![proj002pic16f887.png](proj002pic16f887b.png "proj002pic16f887b.png")  
 <i>**Figure:** proj002pic16f887b.png: Switch is closed and LED glowing.</i>
 
+[A video clip of circuit simulation.](proj002pic16f887.mp4
+)
+
+<video src="proj002pic16f887.mp4" type="video/mp4" controls muted width="500" height="400">Video tag not supported</video>  <!--atributes: autoplay loop -->
+
 ## Description: 
 ---
 - `RA0` pin is configured to be digital output pin. Power is supplied from this pin to LED.

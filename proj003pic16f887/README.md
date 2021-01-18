@@ -64,7 +64,7 @@ Glow LED for certain amount of time when switch close is detected.
 **What are pull-up resistors?**  
 Pull-up resistors are resistors used in logic circuits to ensure a well-defined logical level at a pin under all conditions. As a reminder, digital logic circuits have _`three logic states`_: `high`, `low` and `floating` (or `high impedance`). The high-impedance state occurs when the pin is not pulled to a high or low logic level, but is left “floating instead. A good illustration of this is an unconnected input pin of a microcontroller. It is neither in a high or low logic state, and a microcontroller might unpredictably interpret the input value as either a logical high or logical low. Pull-up resistors are used to solve the dilemma for the microcontroller by pulling the value to a logical high state, as seen in the figure. If there weren’t for the pull-up resistor, the MCU’s input would be floating when the switch is open and brought down only when the switch is closed.  
 
-![](pull_up_resistor.jpg)  
+![pull_up_resistor.jpg](pull_up_resistor.jpg "pull_up_resistor.jpg")  
 <i>**Figure:** pull_up_resistor.jpg: Pull Up Resistor</i>
 
 Pull-up resistors are not a special kind of resistors; they are simple fixed-value resistors connected between the voltage supply (usually +5V) and the appropriate pin, which results in defining the input or output voltage in the absence of a driving signal. A typical pull-up resistor value is 4.7kΩ, but can vary depending on the application.
@@ -75,7 +75,7 @@ Pull-up resistors are not a special kind of resistors; they are simple fixed-val
 **What are pull-down resistors?**  
 Pull-down resistors work in the same manner as pull-up resistors, except that they pull the pin to a logical low value. They are connected between ground and the appropriate pin on a device. An example of a pull-down resistor in a digital circuit can be seen in the figure. A pushbutton switch is connected between the supply voltage and a microcontroller pin. In such a circuit, when the switch is closed, the micro-controller input is at a logical high value, but when the switch is open, the pull-down resistor pulls the input voltage down to ground (logical zero value), preventing an undefined state at the input. The pull-down resistor must have a larger resistance than the impedance of the logic circuit, or else it might be able to pull the voltage down by too much and the input voltage at the pin would remain at a constant logical low value – regardless of the switch position.
 
-![](pull_down_resistor.jpg)  
+![pull_down_resistor.jpg](pull_down_resistor.jpg "pull_down_resistor.jpg")  
 <i>**Figure:** pull_down_resistor.jpg: Pull Down Resistor</i>
 
 **Pull-up resistor value**  

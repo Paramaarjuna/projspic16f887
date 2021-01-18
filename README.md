@@ -26,3 +26,6 @@ Simple projects on PIC16F887 microcontroller.
 **[proj002pic16f887](proj002pic16f887)**: To make an LED glow as long as the switch is closed.
 
 ---
+**[proj003pic16f887](proj003pic16f887)**: Glow LED for certain amount of time when switch close is detected.
+
+---

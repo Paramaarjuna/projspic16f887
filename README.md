@@ -29,3 +29,6 @@ Simple projects on PIC16F887 microcontroller.
 **[proj003pic16f887](proj003pic16f887)**: Glow LED for certain amount of time when switch close is detected.
 
 ---
+**[proj004pic16f887](proj004pic16f887)**: Interface four 7-segment LEDs with PIC16F887 and display a four digit number (Display 4-digit integer number using the multiplexed 7-segment display interface).
+
+---

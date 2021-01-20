@@ -1,0 +1,66 @@
+<circuit reactStep="50" type="simulide_0.4" noLinAcc="5" speed="1000000" animate="57">
+ 
+TextComponent-23: 
+<item Text="7 - segment LED display" y="-388" vflip="1" labelx="-16" valLabRot="0" x="-444" Border="1" Show_id="false" valLabely="0" Fixed_Width="true" rotation="0" Font="Helvetica [Cronyx]" Font_Size="5" id="TextComponent-23" valLabelx="0" Opacity="1" objectName="TextComponent-23" hflip="1" Margin="2" labelrot="0" itemtype="TextComponent" labely="-24"/>
+ 
+TextComponent-21: 
+<item Text="h" y="-332" vflip="1" labelx="-16" valLabRot="0" x="-392" Border="1" Show_id="false" valLabely="0" Fixed_Width="false" rotation="0" Font="Helvetica [Cronyx]" Font_Size="5" id="TextComponent-2" valLabelx="0" Opacity="0" objectName="TextComponent-21" hflip="1" Margin="5" labelrot="0" itemtype="TextComponent" labely="-24"/>
+ 
+TextComponent-20: 
+<item Text="d" y="-332" vflip="1" labelx="-16" valLabRot="0" x="-408" Border="1" Show_id="false" valLabely="0" Fixed_Width="false" rotation="0" Font="Helvetica [Cronyx]" Font_Size="5" id="TextComponent-2" valLabelx="0" Opacity="0" objectName="TextComponent-20" hflip="1" Margin="5" labelrot="0" itemtype="TextComponent" labely="-24"/>
+ 
+TextComponent-19: 
+<item Text="b" y="-356" vflip="1" labelx="-16" valLabRot="0" x="-392" Border="1" Show_id="false" valLabely="0" Fixed_Width="false" rotation="0" Font="Helvetica [Cronyx]" Font_Size="5" id="TextComponent-2" valLabelx="0" Opacity="0" objectName="TextComponent-19" hflip="1" Margin="5" labelrot="0" itemtype="TextComponent" labely="-24"/>
+ 
+TextComponent-18: 
+<item Text="a" y="-372" vflip="1" labelx="-16" valLabRot="0" x="-408" Border="1" Show_id="false" valLabely="0" Fixed_Width="false" rotation="0" Font="Helvetica [Cronyx]" Font_Size="5" id="TextComponent-2" valLabelx="0" Opacity="0" objectName="TextComponent-18" hflip="1" Margin="5" labelrot="0" itemtype="TextComponent" labely="-24"/>
+ 
+TextComponent-17: 
+<item Text="c" y="-340" vflip="1" labelx="-16" valLabRot="0" x="-396" Border="1" Show_id="false" valLabely="0" Fixed_Width="false" rotation="0" Font="Helvetica [Cronyx]" Font_Size="5" id="TextComponent-2" valLabelx="0" Opacity="0" objectName="TextComponent-17" hflip="1" Margin="2" labelrot="0" itemtype="TextComponent" labely="-24"/>
+ 
+TextComponent-16: 
+<item Text="e" y="-336" vflip="1" labelx="-16" valLabRot="0" x="-424" Border="1" Show_id="false" valLabely="0" Fixed_Width="false" rotation="0" Font="Helvetica [Cronyx]" Font_Size="5" id="TextComponent-2" valLabelx="0" Opacity="0" objectName="TextComponent-16" hflip="1" Margin="5" labelrot="0" itemtype="TextComponent" labely="-24"/>
+ 
+TextComponent-15: 
+<item Text="g" y="-352" vflip="1" labelx="-16" valLabRot="0" x="-408" Border="1" Show_id="false" valLabely="0" Fixed_Width="false" rotation="0" Font="Helvetica [Cronyx]" Font_Size="5" id="TextComponent-2" valLabelx="0" Opacity="0" objectName="TextComponent-15" hflip="1" Margin="5" labelrot="0" itemtype="TextComponent" labely="-24"/>
+ 
+TextComponent-14: 
+<item Text="f" y="-356" vflip="1" labelx="-16" valLabRot="0" x="-424" Border="1" Show_id="false" valLabely="0" Fixed_Width="false" rotation="0" Font="Helvetica [Cronyx]" Font_Size="5" id="TextComponent-2" valLabelx="0" Opacity="0" objectName="TextComponent-14" hflip="1" Margin="5" labelrot="0" itemtype="TextComponent" labely="-24"/>
+ 
+Ground-12: 
+<item labelx="-16" labely="8" labelrot="0" itemtype="Ground" y="-280" valLabRot="0" rotation="0" objectName="Ground-12" x="-396" Show_id="false" valLabely="0" id="Ground-12" valLabelx="0" hflip="1" vflip="1"/>
+ 
+TextComponent-11: 
+<item Text="g" y="-324" vflip="1" labelx="-16" valLabRot="0" x="-440" Border="1" Show_id="false" valLabely="0" Fixed_Width="false" rotation="0" Font="Helvetica [Cronyx]" Font_Size="5" id="TextComponent-2" valLabelx="0" Opacity="0" objectName="TextComponent-11" hflip="1" Margin="5" labelrot="0" itemtype="TextComponent" labely="-24"/>
+ 
+TextComponent-10: 
+<item Text="e" y="-340" vflip="1" labelx="-16" valLabRot="0" x="-440" Border="1" Show_id="false" valLabely="0" Fixed_Width="false" rotation="0" Font="Helvetica [Cronyx]" Font_Size="5" id="TextComponent-2" valLabelx="0" Opacity="0" objectName="TextComponent-10" hflip="1" Margin="5" labelrot="0" itemtype="TextComponent" labely="-24"/>
+ 
+TextComponent-9: 
+<item Text="f" y="-332" vflip="1" labelx="-16" valLabRot="0" x="-440" Border="1" Show_id="false" valLabely="0" Fixed_Width="false" rotation="0" Font="Helvetica [Cronyx]" Font_Size="5" id="TextComponent-2" valLabelx="0" Opacity="0" objectName="TextComponent-9" hflip="1" Margin="5" labelrot="0" itemtype="TextComponent" labely="-24"/>
+ 
+TextComponent-8: 
+<item Text="d" y="-348" vflip="1" labelx="-16" valLabRot="0" x="-440" Border="1" Show_id="false" valLabely="0" Fixed_Width="false" rotation="0" Font="Helvetica [Cronyx]" Font_Size="5" id="TextComponent-2" valLabelx="0" Opacity="0" objectName="TextComponent-8" hflip="1" Margin="5" labelrot="0" itemtype="TextComponent" labely="-24"/>
+ 
+TextComponent-6: 
+<item Text="c" y="-356" vflip="1" labelx="-16" valLabRot="0" x="-440" Border="1" Show_id="false" valLabely="0" Fixed_Width="false" rotation="0" Font="Helvetica [Cronyx]" Font_Size="5" id="TextComponent-2" valLabelx="0" Opacity="0" objectName="TextComponent-6" hflip="1" Margin="2" labelrot="0" itemtype="TextComponent" labely="-24"/>
+ 
+TextComponent-5: 
+<item Text="a" y="-372" vflip="1" labelx="-16" valLabRot="0" x="-440" Border="1" Show_id="false" valLabely="0" Fixed_Width="false" rotation="0" Font="Helvetica [Cronyx]" Font_Size="5" id="TextComponent-2" valLabelx="0" Opacity="0" objectName="TextComponent-5" hflip="1" Margin="5" labelrot="0" itemtype="TextComponent" labely="-24"/>
+ 
+TextComponent-4: 
+<item Text="h" y="-308" vflip="1" labelx="-16" valLabRot="0" x="-420" Border="1" Show_id="false" valLabely="0" Fixed_Width="false" rotation="0" Font="Helvetica [Cronyx]" Font_Size="5" id="TextComponent-2" valLabelx="0" Opacity="0" objectName="TextComponent-4" hflip="1" Margin="5" labelrot="0" itemtype="TextComponent" labely="-24"/>
+ 
+TextComponent-3: 
+<item Text="b" y="-364" vflip="1" labelx="-16" valLabRot="0" x="-440" Border="1" Show_id="false" valLabely="0" Fixed_Width="false" rotation="0" Font="Helvetica [Cronyx]" Font_Size="5" id="TextComponent-2" valLabelx="0" Opacity="0" objectName="TextComponent-3" hflip="1" Margin="5" labelrot="0" itemtype="TextComponent" labely="-24"/>
+ 
+Seven Segment-1: 
+<item y="-340" vflip="1" CommonCathode="true" labelx="20" valLabRot="0" x="-404" Show_id="false" valLabely="0" rotation="0" NumDisplays="1" Resistance="1" id="Seven Segment-1" valLabelx="0" Color="0" MaxCurrent="0.02" objectName="Seven Segment-1" Vertical_Pins="false" hflip="1" Threshold="2.3999999999999999" labelrot="0" itemtype="Seven Segment" labely="-44"/>
+ 
+Connector-13: 
+<item y="-308" endpinid="Ground-12-Gnd" vflip="1" pointList="-396,-308,-396,-296" labelx="-16" startpinid="Seven Segment-1-pin_commona" valLabRot="0" x="-396" Show_id="false" valLabely="0" rotation="0" id="Connector-13" valLabelx="0" enodeid="enode-13" objectName="Connector-13" hflip="1" labelrot="0" itemtype="Connector" labely="-24"/>
+ 
+PlotterWidget: 
+<item Scale="1" styleSheet="" maximumWidth="1000" layoutDirection="0" minimized="false" visible="false" toolTipDuration="-1" childrenRect="" minimumSizeHint="" inputMethodHints="0" frameSize="" objectName="PlotterWidget" enabled="true" sizeHint="" palette="" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" mouseTracking="false" cursor="" accessibleDescription="" autoFillBackground="false" windowOpacity="1" x="0" statusTip="" maximumSize="" maximumHeight="200" fullScreen="false" windowFilePath="" contextMenuPolicy="1" sizePolicy="" acceptDrops="false" minimumHeight="200" windowModality="0" windowIcon="" windowIconText="" whatsThis="" MaxVolt="500" minimumWidth="200" focusPolicy="0" pos="" baseSize="" rect="" updatesEnabled="true" toolTip="" MinVolt="-500" sizeIncrement="" modal="false" frameGeometry="" childrenRegion="" maximized="false" windowTitle="" height="200" windowModified="false" itemtype="Plotter" size="" normalGeometry="" isActiveWindow="true" focus="false" width="200" accessibleName="" Tracks="1" y="0" locale="" geometry="" minimumSize=""/>
+ 
+</circuit>

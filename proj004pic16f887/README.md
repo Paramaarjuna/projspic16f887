@@ -93,8 +93,8 @@ BJT is the short form of Bipolar Junction Transistor, it is a solid-state *curre
 
 **Symbol of BJT Transistors**  
 Let's start with the symbol of transistors so that you can identify them in a circuit. The below diagram shows the symbols of the two types of transistors. The one on the left is the symbol of the PNP transistor and the one on the right is the symbol of the NPN transistor. As I said, you will be able to see the three terminals Emitter, Collector, and Base for both the type of Transistor.  
-![BJT-symbol.png](BJT-symbol.png "BJT-symbol.png")  
-<i>**Figure:** BJT-symbol.png: Circuit symbol of BJT.</i>  
+![BJT-Symbol.png](BJT-Symbol.png "BJT-Symbol.png")  
+<i>**Figure:** BJT-Symbol.png: Circuit symbol of BJT.</i>  
 
 The difference between the PNP and NPN transistors is that the arrow mark at the emitter end if you have noticed, the arrow in the PNP transistor is mentioned as moving from the emitter to the base whereas in the NPN transistor the arrow will be moving from the base to the emitter. The Direction of the arrow represents the direction of current flow in the transistor, in PNP the current will be flowing from emitter to base, similarly in the NPN transistor current will be flowing from the base to emitter.  
 ![NPNandPNP-Transistor-Working.gif](NPNandPNP-Transistor-Working.gif "NPNandPNP-Transistor-Working.gif")  

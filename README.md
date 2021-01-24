@@ -32,3 +32,6 @@ Simple projects on PIC16F887 microcontroller.
 **[proj004pic16f887](proj004pic16f887)**: Interface four 7-segment LEDs with PIC16F887 and display a four digit number (Display 4-digit integer number using the multiplexed 7-segment display interface).
 
 ---
+**[proj005pic16f887](proj005pic16f887)**: Interface of PIC16F887 with 16x2 Character matrix 5x8 dot matrix LCD.
+
+---

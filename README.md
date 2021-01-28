@@ -38,3 +38,6 @@ Simple projects on PIC16F887 microcontroller.
 **[proj006pic16f887](proj006pic16f887)**: To demonstrate Analog to Digital Conversion using internal ADC module of PIC16F887.
 
 ---
+**[proj007pic16f887](proj007pic16f887)**: To demonstrate A/D Conversion using internal ADC module of PIC16F887 output the ADC value with corresponding voltage value.
+
+---

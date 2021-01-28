@@ -22,7 +22,7 @@ To demonstrate A/D Conversion using internal ADC module of PIC16F887 output the 
 |Integrated Circuits (IC)|PIC16F887|
 |LCD|HD44780|
 |Power Supply|DC supply|
-|Resistors|R(100 Ohm), Potentiometer(5 KOhm)|
+|Resistors|R(100 Ohm), Potentiometer(2 KOhm)|
 |Voltmeters|Voltmeter|
 |LEDs|LED|
 
@@ -216,6 +216,17 @@ I/D - 0 = decrement cursor position, 1 = increment cursor position; S - 0 = no d
 - 5V DC is applied to the analog channel `AN0` through a 5 KOhm potentiometer. Whenever the ADC conversion function is called, the analog DC voltage at the analog input channel is converted to digital equivalent using internal ADC and the result is stored in specific registers (`ADRESH`+`ADRESL`).
 - The internal ADC stores the result in 10-bit size. Therefore the range is `0000000000` to `1111111111` in binary which is `0` to `1023` in integer(base 10). Therefore our maximum input voltage is sampled to `1024` values. In our case where max. voltage is `5V is equal to ADC value of 1023`. Which means, `ADC value of 564 is equal to 2.57V approximately`.
 - Then ADC result which is in binary is converted to decimal and and each digit is passed per instance to the LCD with the necessary adjustments. Each adjusted digit is placed in PORTB which is then passed to LCD.
+- While displaying equivalent voltage of an ADC value, few calculations are made in the program. Suitable sized variables are used in the program. What actually hapens here is that the ADC value (0 - 1023) is sampled back to voltage value (0V - 5.0V). Consider an example, ADC value about 490 as shown in circuit diagram above and notice its equivalent voltage value which is about 2.39V.
+> - `5*490/1023` will be stored as `2` in an integer variable, even though the actual value is `2.3949...`.
+> - Therefore, `5*490/1023` is changed to `(500*490)/1023`. Here the order of the operands and size of the variables are important.
+> - `500*490` will produce the value `245000`. Therefore the variable's size matter. Now the variable has the value `245000`.
+> - `245000/1023` will produce the value `239.4916`. But the integer valiable stores only `239`.
+> - Now we display the first digit and then a period and then the next two digits.
+> - Just consider if we write the equation in this way in program: `490/1023*500`.
+> - `490/1023` will produce `0.4789`, but `0` is stored in the memory location.
+> - `0*500` will produce `0` and the value stored inside the memory location will be `0`.
+> - Please note that the RHS of an equation in a program is evaluated left to right and each operation's (addition, subtraction, ...) value is stored in temporary memory locations and used for the following operations until there is the final single value left. Then that value is loaded to the variable on LHS. On performing each operation in equation, it appeared as if the temporary memory location's size (thus created) is determined based on the size of the biggest variable among the operands of the operation, which didn't seem right though.
+
 > - 8-bit HEX code is put on `PORTB`; `EN` is made high; `RW` is made low to ensure that the controller is writing to the LCD; `RS`, called as Register Select pin based on which the HEX code on PORTB is considered as either *command* or *data*. `RS=0` for the HEX code to be a command and `RS=1` for the HEX code to be data which gets displayed on the screen.
 > - In our program we wrote two functions named as command and data to choose between the operation type. We use command function to set cursor position (if needed), to clear display, whether the cursor gets automatically incremented and etc. Then we use data function to display the HEX code with corresponding ASCII code on the LCD screen.
 - `__delay_ms(x)` is a macro to produce time delay in terms of milli-seconds. And it's definition is as follows:  

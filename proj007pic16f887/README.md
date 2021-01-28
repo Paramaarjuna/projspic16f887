@@ -41,6 +41,36 @@ To demonstrate A/D Conversion using internal ADC module of PIC16F887 output the 
 
 <video src="proj007pic16f887.mp4" type="video/mp4" controls muted width="500" height="400">Video tag not supported</video>  <!--atributes: autoplay loop -->
 
+## Tabular Column:
+Potentiometer range: 0 to 2 KOhm; ADC value range: 0 to 1023;
+
+|Pot value in `Ohms`|Voltage across pot in `Volts`|ADC value|Voltage across `AN0` channel in `Volts`|
+|:---:|:---:|:---:|:---:|
+|0|2.5x10<sup>-6</sup>|1023|5|
+|100|250x10<sup>-3</sup>|972|4.75|
+|200|500x10<sup>-3</sup>|921|4.5|
+|300|750x10<sup>-3</sup>|870|4.25|
+|400|1|818|3.99|
+|500|1.3|767|3.74|
+|600|1.5|716|3.49|
+|700|1.8|665|3.25|
+|800|2|614|3|
+|900|2.3|563|2.75|
+|1000|2.5|512|2.5|
+|1100|2.7|460|2.24|
+|1200|3|409|1.99|
+|1300|3.2|358|1.74|
+|1400|3.5|307|1.5|
+|1500|3.7|256|1.25|
+|1600|4|205|1|
+|1700|4.2|153|0.74|
+|1800|4.5|102|0.49|
+|1900|4.7|51|0.24|
+|1950|4.9|26|0.12|
+|2000|5|0|0|
+
+**Observation:** Few amount of voltage (which is supplied from DC supply) is dropped in potentiometer based on its value and the remaining amount of voltage is supplied to the `AN0` channel, which results in displaying the DC value equivalent to the voltage at the `AN0` pin; along with the voltage at the `AN0` pin.
+
 ## Description: 
 ---
 - **A/D Conversion procedure**  

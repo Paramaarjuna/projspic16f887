@@ -41,6 +41,36 @@ To demonstrate Analog to Digital Conversion using internal ADC module of PIC16F8
 
 <video src="proj006pic16f887.mp4" type="video/mp4" controls muted width="500" height="400">Video tag not supported</video>  <!--atributes: autoplay loop -->
 
+## Tabular Column:
+Potentiometer range: 0 to 2 KOhm; ADC value range: 0 to 1023;
+
+|Potentiometer value in `Ohms`|Voltage across potentiometer in `volts`|ADC value|
+|:---:|:---:|:---:|
+|0|2.5x10<sup>-6</sup>|1023|
+|100|250x10<sup>-3</sup>|972|
+|200|500x10<sup>-3</sup>|921|
+|300|750x10<sup>-3</sup>|870|
+|400|1|818|
+|500|1.3|767|
+|600|1.5|717|
+|700|1.8|665|
+|800|2.0|614|
+|900|2.3|563|
+|1000|2.5|512|
+|1100|2.7|460|
+|1200|3.0|409|
+|1300|3.2|358|
+|1400|3.5|307|
+|1500|3.7|256|
+|1600|4.0|205|
+|1700|4.2|153|
+|1800|4.5|102|
+|1900|4.7|51|
+|1950|4.9|26|
+|2000|5.0|0|
+
+**Observation:** Few amount of voltage (which is supplied from DC supply) is dropped in potentiometer based on its value and the remaining amount of voltage is supplied to the `AN0` channel, which results in displaying the DC value equivalent to the voltage at the `AN0` pin.
+
 ## Description: 
 ---
 - **A/D Conversion procedure**  

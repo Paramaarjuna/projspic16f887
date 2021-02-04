@@ -8,6 +8,7 @@ Simple projects on PIC16F887 microcontroller.
 ---
 - [MPLAB X IDE v5.35](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide)
 - [SimulIDE_0.4.13-SR5](https://www.simulide.com/p/home.html)
+- [SimulIDE_0.4.14-SR5](https://www.simulide.com/p/home.html)
 
 ### File Description:
 ---
@@ -39,5 +40,8 @@ Simple projects on PIC16F887 microcontroller.
 
 ---
 **[proj007pic16f887](proj007pic16f887)**: To demonstrate A/D Conversion using internal ADC module of PIC16F887 output the ADC value with corresponding voltage value.
+
+---
+**[proj008pic16f887](proj007pic16f887)**: To demonstrate production of PWM (Pulse Width Modulation) signal of particualar frequency and varying its On-time (duty-cycle) with regular delays using Timer0 of the controller and internal clock as the source for the timer0.
 
 ---

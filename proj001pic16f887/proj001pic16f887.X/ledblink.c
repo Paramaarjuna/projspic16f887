@@ -58,7 +58,7 @@ void init()
 //----------------------------------------------------------------------------
 /*
  >>>>> OSCCON: OSCILLATOR CONTROL REGISTER
-bit 7 Unimplemented: Read as ?0?
+bit 7 Unimplemented: Read as '0'
 bit 6-4 IRCF<2:0>: Internal Oscillator Frequency Select bits
 111 = 8 MHz
 110 = 4 MHz (default)
@@ -71,10 +71,10 @@ bit 6-4 IRCF<2:0>: Internal Oscillator Frequency Select bits
 bit 3 OSTS: Oscillator Start-up Time-out Status bit(1)
 1 = Device is running from the external clock defined by FOSC<2:0> of the CONFIG1 register
 0 = Device is running from the internal oscillator (HFINTOSC or LFINTOSC)
-bit 2 HTS: HFINTOSC Status bit (High Frequency ? 8 MHz to 125 kHz)
+bit 2 HTS: HFINTOSC Status bit (High Frequency - 8 MHz to 125 kHz)
 1 = HFINTOSC is stable
 0 = HFINTOSC is not stable
-bit 1 LTS: LFINTOSC Stable bit (Low Frequency ? 31 kHz)
+bit 1 LTS: LFINTOSC Stable bit (Low Frequency - 31 kHz)
 1 = LFINTOSC is stable
 0 = LFINTOSC is not stable
 bit 0 SCS: System Clock Select bit

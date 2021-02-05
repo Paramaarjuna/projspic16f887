@@ -22,14 +22,14 @@ Glow LED for certain amount of time when switch close is detected.
 |---|---|
 |Power supplies|DC supply|
 |Integrated Circuits (IC)|PIC16F887|
-|Resistors|R1(430 Ohm), R2(1 KOhm)|
+|Resistors|R1(220 Ohm), R2(1 KOhm)|
 |Voltmeters|Voltmeter-1, Voltmeter-2, Voltmeter-3|
 |LEDs|LED|
-|Switches|PushB|
+|Switches|Switch|
 
 ### Circuit Diagram: 
 ---
-**Note:** Unlit LED is blue in color and lit LED is reddish/pinkish in color.  
+**Note:** Unlit LED is blue in color and lit LED is yellow in color.  
 
 ![proj003pic16f887.png](proj003pic16f887.png "proj003pic16f887.png")  
 <i>**Figure:** proj003pic16f887.png: Switch is closed and LED glowing.</i>

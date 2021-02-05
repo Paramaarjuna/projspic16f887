@@ -18,8 +18,15 @@ To make an LED blink at regular interval.
 
 ### Circuit Diagram: 
 ---
-![proj001pic16f887.png](proj001pic16f887.png)
+**Note:** Unlit LED is blue in color and lit LED is yellow in color.  
 
+![proj001pic16f887.png](proj001pic16f887.png "proj001pic16f887a.png")  
+<i>**Figure:** proj001pic16f887a.png</i>
+
+[A video clip of circuit simulation.](proj001pic16f887.mp4
+)
+
+<video src="proj0021ic16f887.mp4" type="video/mp4" controls muted width="500" height="400">Video tag not supported</video>  <!--atributes: autoplay loop -->
 
 ### Description: 
 ---

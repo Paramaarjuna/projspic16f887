@@ -1,30 +1,32 @@
-<!-- README.md file for proj006pic16f887 -->
+<!-- README.md file for proj009pic16f887 -->
 
-## PROJECT: proj006pic16f887
+## PROJECT: proj009pic16f887
 ---
 
 
 ## Aim:
 ---
-To demonstrate Analog to Digital Conversion using internal ADC module of PIC16F887.
+To demonstrate Pulse Width Modulation. Duty cycle of the output signal is controlled using ADC and TIMER0 of the controller.  
+To produce PWM signal of a certain frequency. The duty cycle of the signal is varied with respect to an analog input voltage. We use ADC module of the controller to convert analog input voltage to equivalent digital value. We use Timer0 to get the desired output frequency. Atleast close to desired.
 
 ### Apparatus/Software applications: 
 ---
 - MPLAB X IDE v5.35
-- SimulIDE_0.4.13-SR5
+- SimulIDE_0.4.14-SR5
 
-**Main Program**: [adcmodule.c](proj006pic16f887.X/adcmodule.c)
+**Main Program**: [pwmtmr0adc.c](proj009pic16f887.X/pwmtmr0adc.c)
 
-<object data="proj006pic16f887.X/adcmodule.c" type="text/c" width="600"></object>
+<object data="proj009pic16f887.X/pwmtmr0adc.c" type="text/c" width="600"></object>
 
 |Components/Category|Components names in Circuit|
 |---|---|
 |Integrated Circuits (IC)|PIC16F887|
+|Power supply|DC voltage(5V)|
 |LCD|HD44780|
-|Power Supply|DC supply|
 |Resistors|R(100 Ohm), pot(2 KOhm)|
 |Voltmeters|Voltmeter|
 |LEDs|LED|
+|Scopes|Oscilloscope|
 
 <br>
 
@@ -33,43 +35,38 @@ To demonstrate Analog to Digital Conversion using internal ADC module of PIC16F8
 
 **Note:** Lit LEDs turn yellow in color.
 
-![proj006pic16f887.png](proj006pic16f887.png "proj006pic16f887.png")  
-<i>**Figure:** proj006pic16f887.png: Demonstration of internal ADC of PIC16F887 and interfacing LCD(16x2 Character matrix 5x8 dot matrix) to display ADC value.</i>
+![proj009pic16f887.png](proj009pic16f887.png "proj009pic16f887.png")  
+<i>**Figure:** proj009pic16f887.png: Producing variable PWM using timer0 and internal ADC.</i>
 
-[A video clip of circuit simulation.](proj006pic16f887.mp4
+[A video clip of circuit simulation.](proj009pic16f887.mp4
 )
 
-<video src="proj006pic16f887.mp4" type="video/mp4" controls muted width="500" height="400">Video tag not supported</video>  <!--atributes: autoplay loop -->
+<video src="proj009pic16f887.mp4" type="video/mp4" controls muted width="500" height="400">Video tag not supported</video>  <!--atributes: autoplay loop -->
 
 ## Tabular Column:
-Potentiometer range: 0 to 2 KOhm; ADC value range: 0 to 1023;
+Potentiometer range: 0 to 2 KOhm; ADC value range: 0 to 1023; Frequency: 2 KHz equivalent to 250 counts in TMR0 based on selected prescaler.
 
-|Potentiometer value in `Ohms`|Voltage across potentiometer in `volts`|ADC value|
-|:---:|:---:|:---:|
-|0|2.5x10<sup>-6</sup>|1023|
-|100|250x10<sup>-3</sup>|972|
-|200|500x10<sup>-3</sup>|921|
-|300|750x10<sup>-3</sup>|870|
-|400|1|818|
-|500|1.3|767|
-|600|1.5|717|
-|700|1.8|665|
-|800|2.0|614|
-|900|2.3|563|
-|1000|2.5|512|
-|1100|2.7|460|
-|1200|3.0|409|
-|1300|3.2|358|
-|1400|3.5|307|
-|1500|3.7|256|
-|1600|4.0|205|
-|1700|4.2|153|
-|1800|4.5|102|
-|1900|4.7|51|
-|1950|4.9|26|
-|2000|5.0|0|
+|Pot value in `Ohms`|Voltage across pot in `volts`|Voltage across `AN0` channel in `volts`|ADC count|Ton count of the signal|Toff count of the signal|Duty cycle (%)|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|0|5|0|0|1|249|0.4|
+|10|5|0.02|5|1|249|0.4|
+|50|4.9|0.12|26|6|244|2.4|
+|100|4.7|0.24|51|12|238|4.8|
+|200|4.5|0.49|102|24|226|9.6|
+|400|4|1|205|50|200|20|
+|600|3.5|1.5|307|75|175|30|
+|800|3|1.99|409|99|151|39.6|
+|1000|2.5|2.5|512|125|125|50|
+|1200|2|3|614|150|100|60|
+|1400|1.5|3.49|716|174|76|69.6|
+|1600|1|3.99|818|199|51|79.6|
+|1800|500*10<sup>-3</sup>|4.5|921|225|25|90|
+|1900|250*10<sup>-3</sup>|4.75|972|237|13|94.8|
+|1950|125*10<sup>-3</sup>|4.87|997|243|7|97.2|
+|1990|25*10<sup>-3</sup>|4.97|1018|248|2|99.2|
+|2000|0|5|1023|248|2|99.2|
 
-**Observation:** Few amount of voltage (which is supplied from DC supply) is dropped in potentiometer based on its value and the remaining amount of voltage is supplied to the `AN0` channel, which results in displaying the DC value equivalent to the voltage at the `AN0` pin.
+**Observation:** Few amount of voltage (which is supplied from DC supply) is dropped in potentiometer based on its value and the remaining amount of voltage is supplied to the `AN0` channel, which results in displaying the DC value equivalent to the voltage at the `AN0` pin; along with the voltage at the `AN0` pin. As the analog input voltage varies, the duty cycle of the PWM signal is varied. I our case, as the analog voltage decreased the duty cycle of the signal is increased.
 
 ## Description: 
 ---
@@ -108,7 +105,15 @@ perform an Analog-to-Digital conversion:
 - `RA0` is made as analog input using `TRISA0` of `TRISA` and `ANS0` of `ANSEL` respectively; which will be chosen as `AN0`, an ADC input channel.
 - `PORTB` is used to send 8-bit data to display characters on the LCD screen or 8-bit command value to control the possible aspects of the LCD (like cursor position, clearing screen, etc.). `PORTB` direction of operation is controlled using `TRISB`. Just to make sure the port to be a digital port, we can assign `ANSELH` register with value `0x00` manually in the program though it is set so on MCU power-up.
 - `RC7`, `RC6` and `RC5` of `PORTC` are used as control lines of LCD (viz, `EN`, `RW` and `RS` respectively).
-- `RC4` is used to drive an LED, which lits as long as the A/D conversion is in progress. Just as an indicator.
+- `RD4`, which is actually the pin that outputs the PWM signal, is used to drive an LED and Oscilloscope. `RD4` pis made an output pin using `TRISD4`.
+- `OPTION_REG` is configured in such a way that PORTB pull-ups are disabled, clock source for timer0 is internal instruction cycle clock (FOSC/4) (i.e., timer0 is in timer mode), TMR0 increments on low-to-high transition, prescaler is assigned to the Timer0 module and prescaler rate is selected as needed using selectio bits. We chose the prescaler rate of 1:2 with intent to generate 2KHz PWM signal. `TMR0` is an 8-bit register that can count 256 counts in the range from 0 to 255.  Based on this limitation we choose the prescaler rate using the following figure.
+![prescaler_formula.jpg](prescaler_formula.jpg "prescaler_formula.jpg")  
+<i>**Figure:** prescaler_forula.jpg: Prescaler rate selection formula.</i>
+- *If we do not use prescaler:* We chose the frequency of our controller to be 4MHz. Therefore, the TMR0 runs(increments its value) at the frequency equal to fosc/4, i.e., 1 mega counts in a second. Which means, by the time the controller completes 4 mega counts, the TMR0 completes 1 mega counts. Thus the output frequency will be 1MHz. But still, this is not possible beacause TMR0 cannot count upto 1000000, since its value can range from 0 to 255.
+- *When we choose a prescaler (say 1:2):* Lets say our output frequency to be 2KHz. On substituting in the formula, `count=fosc/(4*prescaler*fout)`, count=4000000/(4\*2\*2000), will produce the count value equal to 250, which can fit in TMR0 and thus the prescaler we selected is good to go.
+- Let us consider another example where we want to generate the signal of frequency 50Hz. If we select the prescaler rate as 1:2, count=4000000/(4\*2\*50) will be count=10000. Which will fail to fit in TMR0. Therefore, we cannot choose 1:2 prescaler rate. Prescaler rate, 1:4 results 5000 counts, 1:8 results 2500 counts, 1:16 results 1250 counts, 1:32 results 625 counts, 1:64 results 312.5 counts, which will fail. But prescaler rate 1:128 will result in 156.25 counts (fits in TMR0) which should be round-figured to either 157 or 156 accordingly there will be slight variation in th output frequency.
+- From that derived count value, we split it as needed to decide On-time and Off-time of the signal. Lets say we want 25% duty cycle. 25% On-time in counts is 156/4=39. So we assign `Ton=256-39` that is Ton=217, which will be fed to TMR0. Now TMR0 has the value 217 and TMR0 starts to increment and rolls-over after reaching 255, making the `T0IF=1`, which needs to be cleared everytime in the program. Similarly, `Toff=256-(157-39)=139` is calculated and assigned to TMR0. TMR0 starts to increment from 139 and rolls-over after reaching 255, making the `T0IF=1`.
+
 - **HD44780**
 > - **Pinout diagram**  
 ![hd44780_pinout.jpg](hd44780_pinout.jpg "hd44780_pinout.jpg")  
@@ -246,6 +251,19 @@ I/D - 0 = decrement cursor position, 1 = increment cursor position; S - 0 = no d
 - 5V DC is applied to the analog channel `AN0` through a 5 KOhm potentiometer. Whenever the ADC conversion function is called, the analog DC voltage at the analog input channel is converted to digital equivalent using internal ADC and the result is stored in specific registers (`ADRESH`+`ADRESL`).
 - The internal ADC stores the result in 10-bit size. Therefore the range is `0000000000` to `1111111111` in binary which is `0` to `1023` in integer(base 10). Therefore our maximum input voltage is sampled to `1024` values. In our case where max. voltage is `5V is equal to ADC value of 1023`. Which means, `ADC value of 564 is equal to 2.57V approximately`.
 - Then ADC result which is in binary is converted to decimal and and each digit is passed per instance to the LCD with the necessary adjustments. Each adjusted digit is placed in PORTB which is then passed to LCD.
+- While displaying equivalent voltage of an ADC value, few calculations are made in the program. Suitable sized variables are used in the program. What actually hapens here is that the ADC value (0 - 1023) is sampled back to voltage value (0V - 5.0V). Consider an example, ADC value about 490 as shown in circuit diagram above and notice its equivalent voltage value which is about 2.39V.
+> - `5*490/1023` will be stored as `2` in an integer variable, even though the actual value is `2.3949...`.
+> - Therefore, `5*490/1023` is changed to `(500*490)/1023`. Here the order of the operands and size of the variables are important.
+> - `500*490` will produce the value `245000`. Therefore the variable's size matter. Now the variable has the value `245000`.
+> - `245000/1023` will produce the value `239.4916`. But the integer valiable stores only `239`.
+> - Now we display the first digit and then a period and then the next two digits.
+> - Just consider if we write the equation in this way in program: `490/1023*500`.
+> - `490/1023` will produce `0.4789`, but `0` is stored in the memory location.
+> - `0*500` will produce `0` and the value stored inside the memory location will be `0`.
+> - Please note that the RHS of an equation in a program is evaluated left to right and each operation's (addition, subtraction, ...) value is stored in temporary memory locations and used for the following operations until there is the final single value left. Then that value is loaded to the variable on LHS. On performing each operation in equation, it appeared as if the temporary memory location's size (thus created) is determined based on the size of the biggest variable among the operands of the operation, which didn't seem right though.
+- The ADC maximum possible count and the maximum count value which is derived for a particular frequency are sampled with respect to each other in such a way that by varying the analog input voltage we vary the duty cycle of the signal.
+- We run the controller at a particular frequency. We use `TMR0` to produce the PWM signal of desired frequency within the limited range at pin `RD4`. And acordingly `OPTION_REG` is configured. The output at the `RD4` is fed to Oscilloscope to observe the PWM signal. Corresponding Ton counts are displayed on the LCD screen.
+- Once the Ton and Toff are calculated, they are assigned to TMR0 individually. We vary the duty cycle of the signal after every 3 seconds by changing the values on Ton and Toff.
 > - 8-bit HEX code is put on `PORTB`; `EN` is made high; `RW` is made low to ensure that the controller is writing to the LCD; `RS`, called as Register Select pin based on which the HEX code on PORTB is considered as either *command* or *data*. `RS=0` for the HEX code to be a command and `RS=1` for the HEX code to be data which gets displayed on the screen.
 > - In our program we wrote two functions named as command and data to choose between the operation type. We use command function to set cursor position (if needed), to clear display, whether the cursor gets automatically incremented and etc. Then we use data function to display the HEX code with corresponding ASCII code on the LCD screen.
 - `__delay_ms(x)` is a macro to produce time delay in terms of milli-seconds. And it's definition is as follows:  

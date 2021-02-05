@@ -42,6 +42,9 @@ Simple projects on PIC16F887 microcontroller.
 **[proj007pic16f887](proj007pic16f887)**: To demonstrate A/D Conversion using internal ADC module of PIC16F887 output the ADC value with corresponding voltage value.
 
 ---
-**[proj008pic16f887](proj007pic16f887)**: To demonstrate production of PWM (Pulse Width Modulation) signal of particualar frequency and varying its On-time (duty-cycle) with regular delays using Timer0 of the controller and internal clock as the source for the timer0.
+**[proj008pic16f887](proj008pic16f887)**: To demonstrate production of PWM (Pulse Width Modulation) signal of particualar frequency and varying its On-time (duty-cycle) with regular delays using Timer0 of the controller and internal clock as the source for the timer0.
+
+---
+**[proj009pic16f887](proj009pic16f887)**: To demonstrate Pulse Width Modulation. Duty cycle of the output signal is controlled using ADC and TIMER0 of the controller.
 
 ---

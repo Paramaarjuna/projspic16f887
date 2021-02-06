@@ -48,3 +48,6 @@ Simple projects on PIC16F887 microcontroller.
 **[proj009pic16f887](proj009pic16f887)**: To demonstrate Pulse Width Modulation. Duty cycle of the output signal is controlled using ADC and TIMER0 of the controller.
 
 ---
+**[proj010pic16f887](proj010pic16f887)**: To interface a stepper motor and rotate stepper motor in clockwise or anticlockwise with speed control.
+
+---

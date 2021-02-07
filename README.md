@@ -51,3 +51,9 @@ Simple projects on PIC16F887 microcontroller.
 **[proj010pic16f887](proj010pic16f887)**: To interface a stepper motor and rotate stepper motor in clockwise or anticlockwise with speed control.
 
 ---
+**[proj011pic16f887](proj011pic16f887)**: To demonstrate Pulse Width Modulation. Duty cycle of the output signal is controlled using ADC and TIMER0 of the controller. To produce PWM signal of a certain frequency. The duty cycle of the signal is varied with respect to an analog input voltage. We use ADC module of the controller to convert analog input voltage to equivalent digital value. We use Timer0 to get the desired output frequency. Atleast close to desired. We then feed that PWM signal to dc motor as well to control its speed.
+
+---
+**[proj012pic16f887](proj012pic16f887)**: Drive LEDs from all the available I/O lines of PIC16F887.
+
+---
